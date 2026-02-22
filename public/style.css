@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* TŁO GIF */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url('tlo.gif') center/cover no-repeat;
+    z-index: -2;
+}
+
+/* Przyciemnienie */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+
+.container {
+    text-align: center;
+    background: rgba(0,0,0,0.6);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(6px);
+}
+
+button {
+    display: block;
+    width: 220px;
+    margin: 15px auto;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+.community { background: #5865F2; }
+.minecraft { background: #3C8527; }
+.fivem { background: #FF6600; }
